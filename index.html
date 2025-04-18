@@ -14,41 +14,41 @@
   <header class="navbar">
     <h1>Allan J. Florian Moronta</h1>
     <p>Junior Backend Developer | Node.js | MongoDB | MERN Stack</p>
-    <button onclick="toggleDarkMode()">
-      <i id="theme-icon" class="fas fa-moon"></i>
+    <button class="theme-toggle" onclick="toggleDarkMode()">
+      <i id="theme-icon" class="fas fa-sun"></i>
     </button>
   </header>
 
   <main class="container">
     <section id="about">
-      <h2>Sobre mí</h2>
-      <p>Soy un desarrollador backend junior especializado en Node.js y MongoDB. Me encanta crear APIs eficientes y seguras. Estoy en búsqueda de mi primera oportunidad remota para seguir creciendo como profesional.</p>
+      <h2>About Me</h2>
+      <p>I am a junior backend developer with a strong foundation in Node.js and MongoDB. I enjoy building secure, efficient, and scalable APIs. I’m currently looking for my first remote opportunity where I can contribute and continue growing professionally.</p>
     </section>
 
     <section id="projects">
-      <h2>Proyectos</h2>
+      <h2>Projects</h2>
 
       <div class="project">
-        <h3>API de Gestión de Tareas</h3>
-        <p>Una API REST hecha con Node.js, Express y MongoDB. Incluye autenticación con JWT, CRUD de tareas, y pruebas con Jest.</p>
-        <a href="https://github.com/AllanF01/api_tasks" target="_blank">Ver en GitHub</a>
+        <h3>Task Management API</h3>
+        <p>A RESTful API built with Node.js, Express, and MongoDB. Includes JWT authentication, CRUD operations for tasks, and testing with Jest.</p>
+        <a href="https://github.com/AllanF01/api_tasks" target="_blank">View on GitHub</a>
       </div>
 
       <div class="project">
-        <h3>Marketplace de Segunda Mano</h3>
-        <p>App Flutter conectada con backend en Node.js y base de datos MongoDB. Incluye autenticación, chat y gestión de productos.</p>
-        <a href="https://github.com/Jonatndm/marketplace_segundamano" target="_blank">Ver en GitHub</a>
+        <h3>Second-Hand Marketplace</h3>
+        <p>A Flutter app connected to a Node.js backend with MongoDB. Features authentication, chat between users, and product management.</p>
+        <a href="https://github.com/Jonatndm/marketplace_segundamano" target="_blank">View on GitHub</a>
       </div>
 
     </section>
 
     <section id="contact">
-      <h2>Contacto</h2>
+      <h2>Contact</h2>
       <p><i class="fas fa-envelope"></i> allanflorian8@gmail.com</p>
       <div class="social-icons">
         <a href="https://github.com/AllanF01" target="_blank"><i class="fab fa-github fa-2x"></i></a>
         <a href="https://www.linkedin.com/in/allan-florian/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-        <a href="CV-AllanFlorian.pdf" download class="btn-cv"><i class="fas fa-file-download"></i> Descargar CV</a>
+        <a href="CV-AllanFlorian.pdf" download class="btn-cv"><i class="fas fa-file-download"></i> Download CV</a>
       </div>
     </section>
   </main>
@@ -59,10 +59,16 @@
 
   <script>
     function toggleDarkMode() {
-      document.body.classList.toggle("dark");
+      const body = document.body;
       const icon = document.getElementById("theme-icon");
-      icon.classList.toggle("fa-moon");
-      icon.classList.toggle("fa-sun");
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      } else {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
     }
   </script>
 </body>

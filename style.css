@@ -34,7 +34,8 @@ body.dark .navbar {
   border-bottom: 1px solid #333;
 }
 
-.theme-toggle {
+.theme-toggle,
+.theme-toggle i {
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -43,6 +44,7 @@ body.dark .navbar {
   color: inherit;
 }
 
+/* Main content */
 .container {
   max-width: 800px;
   margin: auto;
@@ -73,7 +75,7 @@ p {
   padding: 15px;
   border-radius: 8px;
   margin-top: 15px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
@@ -111,6 +113,12 @@ a:hover {
 
 .social-icons a {
   margin-right: 15px;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.social-icons a i {
+  background: none;
   color: inherit;
 }
 
