@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Allan Florian - Junior Backend Developer</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script defer src="script.js"></script>
 </head>
+
 <body>
-  <header>
+  <header class="navbar">
     <h1>Allan J. Florian Moronta</h1>
     <p>Junior Backend Developer | Node.js | MongoDB | MERN Stack</p>
-    <button onclick="toggleDarkMode()">🌓 Cambiar tema</button>
+    <button onclick="toggleDarkMode()">
+      <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
   </header>
 
-  <section id="about">
-    <h2>Sobre mí</h2>
-    <p>Soy un desarrollador backend junior especializado en Node.js y MongoDB. Me encanta crear APIs eficientes y seguras. Estoy en búsqueda de mi primera oportunidad remota para seguir creciendo como profesional.</p>
-  </section>
+  <main class="container">
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p>Soy un desarrollador backend junior especializado en Node.js y MongoDB. Me encanta crear APIs eficientes y seguras. Estoy en búsqueda de mi primera oportunidad remota para seguir creciendo como profesional.</p>
+    </section>
 
-  <section id="projects">
-    <h2>Proyectos</h2>
+    <section id="projects">
+      <h2>Proyectos</h2>
 
-    <div class="project">
-      <h3>API de Gestión de Tareas</h3>
-      <p>Una API REST hecha con Node.js, Express y MongoDB. Incluye autenticación con JWT, CRUD de tareas, y pruebas con Jest.</p>
-      <a href="https://github.com/AllanF01/api_tasks" target="_blank">Ver en GitHub</a>
-    </div>
+      <div class="project">
+        <h3>API de Gestión de Tareas</h3>
+        <p>Una API REST hecha con Node.js, Express y MongoDB. Incluye autenticación con JWT, CRUD de tareas, y pruebas con Jest.</p>
+        <a href="https://github.com/AllanF01/api_tasks" target="_blank">Ver en GitHub</a>
+      </div>
 
-    <div class="project">
-      <h3>Marketplace de Segunda Mano</h3>
-      <p>App Flutter conectada con backend en Node.js y base de datos MongoDB. Incluye autenticación, chat y gestión de productos.</p>
-      <a href="https://github.com/Jonatndm/marketplace_segundamano" target="_blank">Ver en GitHub</a>
-    </div>
+      <div class="project">
+        <h3>Marketplace de Segunda Mano</h3>
+        <p>App Flutter conectada con backend en Node.js y base de datos MongoDB. Incluye autenticación, chat y gestión de productos.</p>
+        <a href="https://github.com/Jonatndm/marketplace_segundamano" target="_blank">Ver en GitHub</a>
+      </div>
 
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Contacto</h2>
-    <p><i class="fas fa-envelope"></i> allanflorian.dev@gmail.com</p>
-    <a href="https://github.com/AllanF01" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-    <a href="https://linkedin.com/in/allanflorian" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-    <br><br>
-    <a href="CV-AllanFlorian.pdf" download class="btn-cv">📄 Descargar CV</a>
-  </section>
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p><i class="fas fa-envelope"></i> allanflorian8@gmail.com</p>
+      <div class="social-icons">
+        <a href="https://github.com/AllanF01" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/allan-florian/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="CV-AllanFlorian.pdf" download class="btn-cv"><i class="fas fa-file-download"></i> Descargar CV</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 Allan Florian</p>
   </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+      const icon = document.getElementById("theme-icon");
+      icon.classList.toggle("fa-moon");
+      icon.classList.toggle("fa-sun");
+    }
+  </script>
 </body>
+
 </html>
